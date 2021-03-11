@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AddBurger from './components/AddBurger';
+import ShowToEat from './components/ShowToEat';
+import ShowEaten from './components/Eaten';
 
-function App() {
-  return (
+const initialBurgers =['cheese','bacon','chili'];
+
+export default function App(props) {
+  const [burgersToEat, setBurgersToEat] = useState(initialBurgers);
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <main>
+        <h1>Make Burger</h1>
+        <p>Made Burgers, Eaten Burgers</p>
+        </main>
+
+        <AddBurger value={setBurgersToEat}/>
+        <h2 className="title">Burger Eaten</h2>
+        <ShowToEat value={burgersToEat} />
+        <ShowEaten />
+      </div>
   );
 }
 
-export default App;
+// const App = () => {
+//   const [burger, setBurger] = useState("");
+//   const handleChangeToBurger = (inputValue) => useBurger([...burger, inputValue]);
+
+// }
+
+//   render(){
+//     return (
+      
+//     );
+
+//   }
+// }
