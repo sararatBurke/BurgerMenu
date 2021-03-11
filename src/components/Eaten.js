@@ -6,14 +6,16 @@ import React from 'react';
 // <li> {burger}</li>
 // );
 
-export default function ShowEaten() {
-    return (
+export default function ShowEaten(props) {
+
+    return props.burger.map((poopBurger) => (
         <div>
             <ul>
+                {poopBurger}
                 <button>Poop it</button>
             </ul>     
         </div>
-    );  
+    )); 
 }
 
 /* <ul>{makeBurger.menu} 

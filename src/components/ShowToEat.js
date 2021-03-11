@@ -8,9 +8,10 @@ import React from 'react';
 
 export default function ShowToEat(props){
     
-    return props.value.map((makeBurger) => (
+    return props.burger.map((eatBurger) => (
         <div>
-              {makeBurger}
+              {eatBurger}
+              <button>Eat it</button>
         </div>
 
     ));

@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-
+import React from 'react';
 
 //const burgers = ['Ultimate Burger'];
 
 export default function AddBurger() {  
-    const [addBurgers, setAddBurgers] = useState();
+    //const [addBurgers, setAddBurgers] = useState();
     
     return (
       <div>
@@ -16,6 +15,8 @@ export default function AddBurger() {
             id="text"
             placeholder="Make a new burger"
             />
+
+          <button >Make it!</button>
         {/* {addBurgers.map(()=>(
           <button onClick={() => setAddBurgers()}>
               Make it!
@@ -23,9 +24,6 @@ export default function AddBurger() {
         ))} */}
         <br />       
               
-        <ul>
-            <button>Eat it</button>
-        </ul>
       </div>
     );
   }

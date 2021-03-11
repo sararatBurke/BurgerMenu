@@ -9,6 +9,7 @@ const initialBurgers =['cheese','bacon','chili'];
 export default function App(props) {
   const [burgersToEat, setBurgersToEat] = useState(initialBurgers);
 
+
   return(
     <div className="App">
         <main>
@@ -16,10 +17,10 @@ export default function App(props) {
         <p>Made Burgers, Eaten Burgers</p>
         </main>
 
-        <AddBurger value={setBurgersToEat}/>
+        <AddBurger burger={setBurgersToEat}/>
+        <ShowToEat burger={burgersToEat} />
         <h2 className="title">Burger Eaten</h2>
-        <ShowToEat value={burgersToEat} />
-        <ShowEaten />
+        <ShowEaten burger={burgersToEat}/>
       </div>
   );
 }
