@@ -10,14 +10,26 @@ export default function ShowEaten(props) {
 
     return props.burger.map((poopBurger) => (
         <div>
-            <ul>
-                {poopBurger}
-                <button>Poop it</button>
+            <ul style={style.list}>
+                {poopBurger} 
+                <button style={style.addButton}>Poop it</button>
             </ul>     
         </div>
     )); 
 }
 
-/* <ul>{makeBurger.menu} 
-    <button>Poop it!</button>
-</ul> */
+const style = {
+    list:{
+      fontSize: '1.2em',
+      color:'#fff'
+
+    },
+    addButton: {
+      padding: '5px 10px ',
+      fontSize: '1em',
+      background: 'rgb(230, 225, 20)',
+      border: 'solid',
+      borderRadius:'5px',
+      fload: 'right'
+    }
+}

@@ -10,11 +10,26 @@ export default function ShowToEat(props){
     
     return props.burger.map((eatBurger) => (
         <div>
+            <ul style={style.list}>
               {eatBurger}
-              <button>Eat it</button>
+              <button style={style.addButton}>Eat it</button>
+            </ul>
         </div>
 
     ));
 
     
 } 
+const style = {
+    list: {
+      fontSize: '1.2em',
+      color:'#fff'
+    },
+    addButton: {
+      padding: '5px 10px ',
+      fontSize: '1em',
+      background: 'rgb(230, 225, 20)',
+      border: 'solid',
+      borderRadius:'5px'
+    }
+}

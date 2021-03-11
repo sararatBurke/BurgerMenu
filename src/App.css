@@ -29,14 +29,14 @@
 }
 
 .App .title {
-  color: rgb(30, 30, 30);
+  color: #fff;
   font-size: 2rem;
-  width: 50%;
+  width: 46%;
   margin: auto;
   margin-top: 20px;
   padding: 10px;
   text-align: center;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }

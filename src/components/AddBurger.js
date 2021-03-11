@@ -8,7 +8,7 @@ export default function AddBurger() {
     return (
       <div>
         <h2 className="title">Burger Made</h2>
-            <label>New Burger: </label>
+            <label style={style.addB}>New Burger: </label>
             <input
             type="text"
             name="text"
@@ -16,7 +16,7 @@ export default function AddBurger() {
             placeholder="Make a new burger"
             />
 
-          <button >Make it!</button>
+          <button style={style.addButton}>Make it!</button>
         {/* {addBurgers.map(()=>(
           <button onClick={() => setAddBurgers()}>
               Make it!
@@ -27,3 +27,19 @@ export default function AddBurger() {
       </div>
     );
   }
+
+  const style = {
+    addB: {
+      color: '#fff',
+      fontSize: '1.1em',
+      fontWeight: 'bold'
+    },
+    addButton: {
+      padding: '5px 10px ',
+      fontSize: '1em',
+      background: 'rgb(230, 225, 20)',
+      border: 'solid',
+      borderRadius:'5px'
+    }
+  }
+  
