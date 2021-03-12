@@ -5,6 +5,7 @@ import ShowToEat from './components/ShowToEat';
 import Eaten from './components/Eaten';
 
 
+
 export default function App() {
   const [burgersToEat, setBurgersToEat] = useState(["Burger"]);
   const addNewburger = (newBurger) => {

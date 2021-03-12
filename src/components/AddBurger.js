@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from './components/firebase';
 
 export default function AddBurger(props) {  
 
@@ -16,6 +17,10 @@ export default function AddBurger(props) {
           <button 
             onClick={()=>{
               const newBurgerValue = document.getElementById("newburger").value;
+              const date = firebase
+              .firestore()
+              .collection("addburger")
+              .doc().id;
               props.add(newBurgerValue)
             }}
               style={style.addButton}>
