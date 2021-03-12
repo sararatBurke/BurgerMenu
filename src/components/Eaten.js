@@ -8,11 +8,11 @@ import React from 'react';
 
 export default function ShowEaten(props) {
 
-    return props.burger.map((poopBurger) => (
+    return props.poo.map((poopBurger) => (
         <div>
             <ul style={style.list}>
                 {poopBurger} 
-                <button style={style.addButton}>Poop it</button>
+                <button style={style.button}>Poop it</button>
             </ul>     
         </div>
     )); 
@@ -20,13 +20,15 @@ export default function ShowEaten(props) {
 
 const style = {
     list:{
-      fontSize: '1.2em',
-      color:'#fff'
+      fontSize: '1.4em',
+      color:'#fff',
+      fontWeight: 'bold',
+      textShadow: '1px 1px 4px #000'
 
     },
-    addButton: {
-      padding: '5px 10px ',
-      fontSize: '1em',
+    button: {
+      padding: '5px',
+      fontSize: '0.8em',
       background: 'rgb(230, 225, 20)',
       border: 'solid',
       borderRadius:'5px',

@@ -8,11 +8,11 @@ import React from 'react';
 
 export default function ShowToEat(props){
     
-    return props.burger.map((eatBurger) => (
+    return props.eat.map((eatBurger) => (
         <div>
             <ul style={style.list}>
               {eatBurger}
-              <button style={style.addButton}>Eat it</button>
+              <button style={style.button}>Eat it</button>
             </ul>
         </div>
 
@@ -22,12 +22,14 @@ export default function ShowToEat(props){
 } 
 const style = {
     list: {
-      fontSize: '1.2em',
-      color:'#fff'
+      fontSize: '1.4em',
+      color:'#fff',
+      fontWeight: 'bold',
+      textShadow: '1px 1px 4px #000'
     },
-    addButton: {
-      padding: '5px 10px ',
-      fontSize: '1em',
+    button: {
+      padding: '5px',
+      fontSize: '0.8em',
       background: 'rgb(230, 225, 20)',
       border: 'solid',
       borderRadius:'5px'

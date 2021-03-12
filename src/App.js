@@ -4,11 +4,11 @@ import AddBurger from './components/AddBurger';
 import ShowToEat from './components/ShowToEat';
 import ShowEaten from './components/Eaten';
 
-const initialBurgers =['cheese','bacon','chili'];
+ const initialBurgers =['cheese','bacon','chili'];
 
-export default function App(props) {
+export default function App() {
   const [burgersToEat, setBurgersToEat] = useState(initialBurgers);
-
+  const addNewburger = (newBurger) => setBurgersToEat([...burgersToEat, newBurger]);
 
   return(
     <div className="App">
@@ -17,10 +17,10 @@ export default function App(props) {
         <p>Made Burgers, Eaten Burgers</p>
         </main>
 
-        <AddBurger burger={setBurgersToEat}/>
-        <ShowToEat burger={burgersToEat} />
+        <AddBurger add={addNewburger}/>
+        <ShowToEat eat={burgersToEat} />
         <h2 className="title">Burger Eaten</h2>
-        <ShowEaten burger={burgersToEat}/>
+        <ShowEaten poo={burgersToEat}/>
       </div>
   );
 }

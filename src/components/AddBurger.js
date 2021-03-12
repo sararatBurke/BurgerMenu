@@ -1,27 +1,25 @@
 import React from 'react';
 
-//const burgers = ['Ultimate Burger'];
-
-export default function AddBurger() {  
-    //const [addBurgers, setAddBurgers] = useState();
-    
+export default function AddBurger(props) {  
+  
     return (
       <div>
         <h2 className="title">Burger Made</h2>
-            <label style={style.addB}>New Burger: </label>
-            <input
-            type="text"
-            name="text"
-            id="text"
-            placeholder="Make a new burger"
+            <label style={style.label}>New Burger: </label>
+            <input 
+              onChange={props.newBurger}
+              type="text"
+              name="text"
+              id="newburger"
+              placeholder="Make a new burger"
             />
-
-          <button style={style.addButton}>Make it!</button>
-        {/* {addBurgers.map(()=>(
-          <button onClick={() => setAddBurgers()}>
-              Make it!
+          <button 
+            onClick={()=>{
+              const newBurgerValue = document.getElementById("newburger").value;
+              props.add(newBurgerValue)}}
+            style={style.addButton}>
+            Make it!
           </button>
-        ))} */}
         <br />       
               
       </div>
@@ -29,10 +27,11 @@ export default function AddBurger() {
   }
 
   const style = {
-    addB: {
+    label: {
       color: '#fff',
       fontSize: '1.1em',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      textShadow: '1px 1px 4px #000'
     },
     addButton: {
       padding: '5px 10px ',
