@@ -10,6 +10,21 @@ export default function App() {
   const addNewburger = (newBurger) => setBurgersToEat([...burgersToEat, newBurger]);
   const [burgersEaten, setBurgerEaten] = useState([]);
   const addEatenBurger = (eaten) => setBurgerEaten([...burgersEaten, eaten]);
+  
+  const deleteNewBurger = (item) =>{
+    const eating = burgersToEat.indexOf(item);
+    if(eating > -1){
+      setBurgersToEat(burgersToEat.filter((b, i) => i !== eating));
+    }
+  };
+
+  const deleteEatenBurger = (eatenItem) =>{
+    const poop = burgersEaten.indexOf(eatenItem);
+    if(poop > -1){
+      setBurgerEaten(burgersEaten.filter((a, i) => i !== poop));
+    };
+
+  };
 
   
   return(
@@ -20,9 +35,9 @@ export default function App() {
         </main>
 
         <AddBurger add={addNewburger}/>
-        <ShowToEat eat={burgersToEat} onClick={addEatenBurger}/>
+        <ShowToEat eat={burgersToEat} addEatenBurger={addEatenBurger} delete={deleteNewBurger} />
         <h2 className="title">Burger Eaten</h2>
-        <Eaten poo={burgersEaten}/>
+        <Eaten poo={burgersEaten} deleteEatenB={deleteEatenBurger}/>
       </div>
   );
 }

@@ -8,20 +8,24 @@ import React from 'react';
 
 export default function ShowToEat(props){
     
-    return props.eat.map((eatingBurger) => (
+    return props.eat.map((eatingBurger) => 
+    {
+      console.log(props.eat);
+      return (
         <div>
             <ul style={style.list}>
               {eatingBurger}
               <button 
                 onClick={()=>{
-                  props.onClick(eatingBurger)
+                  props.addEatenBurger(eatingBurger);
+                  props.delete(eatingBurger);
                 }}     
                 style={style.button}>
                 Eat it</button>
             </ul>
         </div>
 
-    ));
+    )});
 
     
 } 

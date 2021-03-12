@@ -7,7 +7,8 @@ export default function Eaten(props) {
             <ul style={style.list}>
                 {eatBurger}
                 <button 
-                onClick={() => alert(eatBurger)}
+                onClick={() => {props.deleteEatenB(eatBurger);}
+                }
                 style={style.button} >
                     Poop it
                 </button>
