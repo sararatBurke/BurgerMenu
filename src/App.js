@@ -7,7 +7,10 @@ import Eaten from './components/Eaten';
 
 export default function App() {
   const [burgersToEat, setBurgersToEat] = useState(["Burger"]);
-  const addNewburger = (newBurger) => setBurgersToEat([...burgersToEat, newBurger]);
+  const addNewburger = (newBurger) => {
+    if(newBurger.length > 0){
+    setBurgersToEat([...burgersToEat, newBurger]);}
+  };
   const [burgersEaten, setBurgerEaten] = useState([]);
   const addEatenBurger = (eaten) => setBurgerEaten([...burgersEaten, eaten]);
   
