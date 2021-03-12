@@ -8,11 +8,16 @@ import React from 'react';
 
 export default function ShowToEat(props){
     
-    return props.eat.map((eatBurger) => (
+    return props.eat.map((eatingBurger) => (
         <div>
             <ul style={style.list}>
-              {eatBurger}
-              <button style={style.button}>Eat it</button>
+              {eatingBurger}
+              <button 
+                onClick={()=>{
+                  props.onClick(eatingBurger)
+                }}     
+                style={style.button}>
+                Eat it</button>
             </ul>
         </div>
 

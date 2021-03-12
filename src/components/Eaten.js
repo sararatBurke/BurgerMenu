@@ -1,18 +1,16 @@
 import React from 'react';
 
+export default function Eaten(props) {
 
-// const burgers = ['Cheese burger', 'Fired chicken burger'];
-// const eating = burgers.map((burger) =>
-// <li> {burger}</li>
-// );
-
-export default function ShowEaten(props) {
-
-    return props.poo.map((poopBurger) => (
+    return props.poo.map((eatBurger) => (
         <div>
             <ul style={style.list}>
-                {poopBurger} 
-                <button style={style.button}>Poop it</button>
+                {eatBurger}
+                <button 
+                onClick={() => alert(eatBurger)}
+                style={style.button} >
+                    Poop it
+                </button>
             </ul>     
         </div>
     )); 

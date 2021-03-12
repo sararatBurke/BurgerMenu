@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import './App.css';
 import AddBurger from './components/AddBurger';
 import ShowToEat from './components/ShowToEat';
-import ShowEaten from './components/Eaten';
+import Eaten from './components/Eaten';
 
- const initialBurgers =['cheese','bacon','chili'];
 
 export default function App() {
-  const [burgersToEat, setBurgersToEat] = useState(initialBurgers);
+  const [burgersToEat, setBurgersToEat] = useState(["Burger"]);
   const addNewburger = (newBurger) => setBurgersToEat([...burgersToEat, newBurger]);
+  const [burgersEaten, setBurgerEaten] = useState([]);
+  const addEatenBurger = (eaten) => setBurgerEaten([...burgersEaten, eaten]);
 
+  
   return(
     <div className="App">
         <main>
@@ -18,24 +20,9 @@ export default function App() {
         </main>
 
         <AddBurger add={addNewburger}/>
-        <ShowToEat eat={burgersToEat} />
+        <ShowToEat eat={burgersToEat} onClick={addEatenBurger}/>
         <h2 className="title">Burger Eaten</h2>
-        <ShowEaten poo={burgersToEat}/>
+        <Eaten poo={burgersEaten}/>
       </div>
   );
 }
-
-// const App = () => {
-//   const [burger, setBurger] = useState("");
-//   const handleChangeToBurger = (inputValue) => useBurger([...burger, inputValue]);
-
-// }
-
-//   render(){
-//     return (
-      
-//     );
-
-//   }
-// }
-

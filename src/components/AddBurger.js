@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function AddBurger(props) {  
-  
+
     return (
       <div>
         <h2 className="title">Burger Made</h2>
@@ -16,9 +16,10 @@ export default function AddBurger(props) {
           <button 
             onClick={()=>{
               const newBurgerValue = document.getElementById("newburger").value;
-              props.add(newBurgerValue)}}
-            style={style.addButton}>
-            Make it!
+              props.add(newBurgerValue)
+            }}
+              style={style.addButton}>
+              Make it!
           </button>
         <br />       
               
