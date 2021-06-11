@@ -10,7 +10,7 @@ export default function Eaten(props) {
                 onClick={() => {props.deleteEatenB(eatBurger);}
                 }
                 style={style.button} >
-                    Poop it
+                    Delete it
                 </button>
             </ul>     
         </div>

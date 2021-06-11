@@ -3,11 +3,16 @@ import './App.css';
 import AddBurger from './components/AddBurger';
 import ShowToEat from './components/ShowToEat';
 import Eaten from './components/Eaten';
+import firebase from './components/firebase';
 
 
 
 export default function App() {
-  const [burgersToEat, setBurgersToEat] = useState(["Burger"]);
+  const [burgersToEat, setBurgersToEat] = useState([]);
+  const dt = firebase
+              .firestore()
+              .collection("addburger")
+              .doc().id;
   const addNewburger = (newBurger) => {
     if(newBurger.length > 0){
     setBurgersToEat([...burgersToEat, newBurger]);}
